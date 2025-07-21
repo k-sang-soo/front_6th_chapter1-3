@@ -16,11 +16,13 @@ export const deepEqualsArrays = (arrayA: ArrayValue, arrayB: ArrayValue) => {
   const arrayALength = arrayA.length;
   const arrayBLength = arrayB.length;
 
+  // 길이가 다르면 false
   if (arrayALength !== arrayBLength) {
     return false;
   }
 
   for (let i = 0; i < arrayALength; i++) {
+    // 각 요소를 재귀적으로 비교
     if (!deepEquals(arrayA[i], arrayB[i])) {
       return false;
     }

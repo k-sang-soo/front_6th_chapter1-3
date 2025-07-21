@@ -32,6 +32,7 @@ export default function deepEqualsObjects(objectA: ObjectValue, objectB: ObjectV
       return false;
     }
 
+    // 각 요소를 재귀적으로 비교
     if (!deepEquals(objectA[key], objectB[key])) {
       return false;
     }
