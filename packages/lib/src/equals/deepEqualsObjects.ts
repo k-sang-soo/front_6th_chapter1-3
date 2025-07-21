@@ -3,7 +3,6 @@ import { deepEquals } from "./deepEquals.ts";
 type ObjectValue = Record<string, unknown>;
 
 export default function deepEqualsObjects(objectA: ObjectValue, objectB: ObjectValue): boolean {
-  console.log("deepEqualsObjects", objectA, objectB);
   // 참조가 같으면 true
   if (objectA === objectB) {
     return true;
